@@ -50,3 +50,4 @@ jobs:
         environment: ${{ matrix.environment }}
   
     - run: pixi run -e ${{ matrix.environment }} pytest
+    # - run: pixi run -e ${{ matrix.environment }} pytest --cov --cov-report=json --doctest-glob="*.rst" --doctest-modules

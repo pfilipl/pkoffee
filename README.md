@@ -1,5 +1,4 @@
-[![pkoffee status](https://github.com/pfilipl/pkoffee/actions/workflows/test.yaml/badge.svg)
-<!-- [![pkoffee coverage](https://pfilipl.github.io/pkofffee/badges/coverage.svg)](https://github.com/pfilipl/pkoffee/actions) -->
+[![Test workflow](https://github.com/pfilipl/pkoffee/actions/workflows/test.yml/badge.svg?branch=ex-day2-add-CI&event=push)](https://github.com/pfilipl/pkoffee/actions/workflows/test.yml)
 
 # PKoffee - Coffee Productivity Analysis
 
