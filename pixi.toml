@@ -51,20 +51,20 @@ tomlkit = ">=0.13.3,<1"
 
 # A feature per-python version to test the build-variants
 [feature.py312.dependencies]
-python=">=3.12,<3.13"
+python=">=3.14.2,<3.15"
 
 [feature.py313.dependencies]
-python=">=3.13,<3.14"
+python=">=3.14.2,<3.15"
 
 [feature.py314.dependencies]
-python=">=3.14,<3.15"
+python=">=3.14.2,<3.15"
 
 [feature.dev.dependencies]
-jupyterlab = ">=4.4.3,<5"
+jupyterlab = ">=4.5.2,<5"
 
 [feature.test.dependencies]
-pytest = "9.*"
-pytest-cov = "*"
+pytest = ">=9.0.2,<10"
+pytest-cov = ">=7.0.0,<8"
 
 [environments]
 prod = { features = ["py313"], solve-group = "prod" }
