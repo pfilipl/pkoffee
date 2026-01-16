@@ -24,8 +24,22 @@ jobs:
       run: pixi run ruff check
  
  unit-tests:
-  runs-on: ubuntu-latest
+  runs-on: ${{ matrix.os }}
   needs: code-checks # don't bother running tests if code-checks fails.
+
+  strategy:
+    fail-fast: false
+    matrix:
+      os:
+        - ubuntu-latest
+        - macos-latest
+        - windows-latest
+      environment:
+        - default
+        - prod
+        - prod312
+        - prod314
+
   steps:
     - name: Checkout the code
       uses: actions/checkout@v6
@@ -35,4 +49,4 @@ jobs:
       with:
         pixi-version: v0.62.2 # good to pin this since pixi is not 1.0 yet!
   
-    - run: pixi run pytest
+    - run: pixi run -e ${{ matrix.environment }} pytest
