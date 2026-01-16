@@ -68,16 +68,13 @@ pytest-cov = "*"
 
 [environments]
 prod = { features = ["py313"], solve-group = "prod" }
-test_prod = { features = ["py313", "test"], solve-group = "prod" }
 
 # use default for the dev environment so tasks are resolved in this environment (avoids having to specify env)
 # no need to include doc: pixi will figure the environment to use from the task if it is unique
 default = { features = ["dev", "py313", "test"], solve-group = "prod" }
 
 # python 3.14 environments for testing
-prod314 = { features = ["py314"], solve-group = "prod314" }
-test_prod314 = { features = ["py314", "test"], solve-group = "prod314" }
+prod314 = { features = ["py314", "test"], solve-group = "prod314" }
 
 # python 3.12 environments for testing
-prod312 = { features = ["py312"], solve-group = "prod312" }
-test_prod312 = { features = ["py312", "test"], solve-group = "prod312" }
+prod312 = { features = ["py312", "test"], solve-group = "prod312" }
