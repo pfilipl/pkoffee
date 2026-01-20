@@ -1,0 +1,9 @@
+FROM ghcr.io/prefix-dev/pixi:0.61.0
+
+COPY . /pkoffee
+
+WORKDIR /pkoffee
+
+RUN pixi install
+
+CMD ["pixi", "shell"]
